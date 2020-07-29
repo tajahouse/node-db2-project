@@ -7,10 +7,11 @@ exports.up = function(knex) {
       tbl.text('model', 120)
         .notNullable();
       tbl.text('VIN', 17)
-        .notNullable();
+        .notNullable()
+        .unique();
       tbl.int('mileage', 6)
         .notNullable()
-      tbl.text('')
+      tbl.text('transmission',120)
   })
 }; // The change we make to our schema
 
